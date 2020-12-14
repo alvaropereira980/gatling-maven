@@ -1,4 +1,4 @@
-package computerdatabase
+package gatling
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -27,13 +27,10 @@ class BasicSimulation extends Simulation{
     .pause(2)
     .exec(http("request_5")
       .get("/computers?p=1"))
-    .pause(670 milliseconds)
     .exec(http("request_6")
       .get("/computers?p=2"))
-    .pause(629 milliseconds)
     .exec(http("request_7")
       .get("/computers?p=3"))
-    .pause(734 milliseconds)
     .exec(http("request_8")
       .get("/computers?p=4"))
     .pause(5)
